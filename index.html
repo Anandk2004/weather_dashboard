@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App Pro</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="background"></div>
+
+  <!-- Page Title -->
+  <header>
+    <h1 class="title"><img src="https://twemoji.maxcdn.com/v/latest/72x72/1f326.png" alt="🌦" /> Weather Dashboard</h1>
+  </header>
+
+  <!-- Layout Wrapper -->
+  <div class="layout">
+    
+    <!-- LEFT SIDEBAR -->
+   <aside class="sidebar left">
+  <div class="info-card">🌫️ AQI : <span id="aqi">--</span></div>
+  <div class="info-card">🌬️ Wind Speed:<span id="wind">--</span>km/h</div>
+  <div class="info-card">💧 Humidity : <span id="humidity">--</span>%</div>
+</aside>
+    <!-- MAIN APP -->
+    <main class="app">
+      <!-- Search -->
+      <div class="card search-box">
+        <input type="text" id="city-input" placeholder="Enter city name" />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <!-- Current Weather -->
+      <div class="card current-weather">
+        <h2 id="city">--</h2>
+        <p id="time">--:--</p>
+        <div class="temp-block">
+          <span id="temp"> -- °C</span>
+          <img id="icon" src="" alt="" />
+        </div>
+        <p id="desc">--</p>
+        <p>High: <span id="temp-max">--</span>° | Low: <span id="temp-min">--</span>°</p>
+      </div>
+
+         <!-- Forecast inside the app card -->
+    <div class="forecast-section">
+      <h2 class="forecast-title">4-Day Weather Forecast</h2>
+      <div class="forecast" id="forecast">
+        <!-- JS fills forecast cards -->
+      </div>
+    </div>
+
+    </main>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="sidebar right">
+  <div class="info-card">🌡️ Pressure : <span id="pressure">--</span> hPa</div>
+  <div class="info-card">👁️ Visibility : <span id="visibility">--</span> km</div>
+  <div class="info-card">☔ Chance of Rain : <span id="rain">--</span>%</div>
+</aside>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  color: #333;
+}
+
+/*  i used this for the 3D Animated by using Gradient Background */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-75deg, #1e3c72, #1ddde4, #76b852, #d8267f,#bad32b,#ff0000);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  z-index: -1;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+header .title {
+  font-size: 3rem;
+  margin: 20px 0;
+  text-align: center;
+  color: #fff;
+}
+
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  
+}
+
+.sidebar {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  gap: 30px;
+}
+.sidebar.left {
+  margin-right: 45px;
+}
+.sidebar.right {
+  margin-left: 45px;
+}
+.info-card {
+  background: rgba(10, 10, 10, 0.986);
+  padding: 15px;
+  border-radius: 12px;
+  color: #fff;
+  /* text-align: left; */
+  font-weight: 2rem;
+  font-size: 20px;
+
+  box-shadow: 1 4px 12px rgba(14, 13, 13, 0);
+  backdrop-filter: blur(6px);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.app {
+  flex: 1;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.card {
+  background: rgba(0, 0, 0, 0.973);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.search-box input{
+      height:30px;
+      width: 80%;
+      border-radius: 9px;
+      text-align: center;
+}
+.search-box button{
+   height: 30px;
+   width: 75px;
+   border-radius: 7px;
+   margin-left: 10px;
+
+}
+.search-box button:hover {
+  background: #fff;
+  color: #00e6ff;
+  /* box-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff;
+  transition: all 0.3s ease; */
+}
+.current-weather h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  
+}
+#time{
+  color: #fff;
+  font-weight: 900;
+  font-size: 20px;
+}
+#temp{
+  color: aliceblue;
+  font-size: 70px;
+    
+}
+#icon{
+  width: 200px;
+  height: 200px;
+}
+#desc{
+  
+  color: aliceblue;
+  font-size: 20px;
+}
+.current-weather p{
+  color: aliceblue;
+}
+.temp-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+.temp-block img {
+  width: 150px;
+  height: 150px;
+}
+#day{
+  z-index: 2;
+  color: #ff0000;
+}
+ .forecast-section {
+  margin-top: 20px;
+  padding: 5px;
+  background: black;
+  border-radius: 10px;
+}
+
+ .forecast-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 8px  0 0 16px;
+} 
+
+.forecast{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+  gap: 5px;
+}
+.forecast-card {
+  background:white;
+  border-radius: 8px;
+  padding: 10px;
+  color:black;
+  font-size: 20px;
+
+
+}
+.forecast-card small {
+  font-size: 0.8rem;
+  color: black;
+  font-size: 15px;
+}
